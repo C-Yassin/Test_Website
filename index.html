@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marocco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <script>disableScroll()</script>
+    <div class="container mt-2 ">
+        <ul class="nav d-flex justify-content-between align-items-center">
+            <div class="logo">
+                <a href=""><img src="icon.png" alt="logo"></a>
+            </div>
+            <li class="nav-item navbarItem"><a class="nav-link text-white" href="">SURFCAMP</a></li>
+            <li class="nav-item navbarItem"><a class="nav-link text-white" href="">Tours</a></li>
+            <li class="nav-item navbarItem"><a class="nav-link text-white" href="">Cars</a></li>
+            <li class="nav-item navbarItem"><a class="nav-link text-white" href="">MOTOCYCLE</a></li>
+            <li class="nav-item navbarItem"><a class="nav-link text-white" href="">About us</a></li>
+            <li class="nav-item navbarItem"><a class="nav-link text-white cursorfix" onclick="Scroll('footerh1')">CONTACT US</a></li>
+        </ul>
+    </div>
+    <hr class="white">
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center flex-column">
+        <h1 class="h1 text-white">Looking For Real Morocco Tour?</h1>
+        <p class="text-white">Adventurers, make your life unforgettable!</p>
+        <div class="img-container">
+            <img class="img-thumbnail" src="BUGGY-BIKE-min.jpg" alt="">
+            <img class="img-thumbnail" src="Camel-Trekking-min-min.jpg" alt="">
+            <img class="img-thumbnail" src="motorcycle-min.jpg" alt="cars-rental-min.jpg">
+            <img class="img-thumbnail" src="excursion.jpg" alt="">
+        </div>
+        <button class="btn btn-primary p-2 border" onclick="Scroll('wx-container')">Check Offers!</button>
+    </div>
+    <video autoplay loop muted class="video_bg" src="video.mp4"></video>
+    <div class="pw-container">
+       <div class="wx-container" id="wx-container">
+            <h1 class="h1 p-5 pb-0 text-center">BEST THINGS TO DO IN AGADIR</h1>
+            <hr>
+            <p class="p-5 text-center">Are you ready for non-stop action and epic adventures? <br>
+            From camel trekking to sandboarding to quad excursions, our agency offers many exciting activities to ensure you make the most of your visit. <br>
+            All tours can be arranged with activities according to your needs.</p>
+            <div class="offers-parent d-flex justify-content-center align-items-center">
+                <div class="offer">
+                    <div class="offer-img">
+                        <img src="1.jpg" alt="">
+                        <a class="text-white text-center" href="#" class="title"> <strong>AGADIR FLYBOARD</strong> </a>
+                    </div>
+                    <div class="second-offer-div">
+                        <h1 class="text-center text-info">24,000.00DH</h1>
+                        <p class="text-center text-secondary">3days</p>
+                        <p class="text-center">For all of the thrill-seekers out there, this must be a water recreation now no longer to be missed.</p>
+                        <button class="btn btn-primary" onclick="ShowBuy()">Buy Now!</button>
+                    </div>
+               </div>
+               <div class="offer">
+                    <div class="offer-img">
+                        <img src="2.jpg" alt="">
+                        <a class="text-white text-center" href="#" class="title"> <strong>DESERT AND ATLAS MOTORCYCLE TOUR</strong> </a>
+                    </div>
+                    <div class="second-offer-div">
+                        <h1 class="text-center text-info">620.00DH</h1>
+                        <p class="text-center text-secondary">7days / 6nights</p>
+                        <p class="text-center">Don’t want to spend time in the preparation and organization of your next motorcycle holiday?</p>
+                        <button class="btn btn-primary" onclick="ShowBuy()">Buy Now!</button>
+                    </div>
+                </div>
+                <div class="offer">
+                        <div class="offer-img">
+                            <img src="3.jpg" alt="">
+                            <a class="text-white text-center" href="#" class="title"> <strong>JET SKI IN AGADIR</strong> </a>
+                        </div>
+                        <div class="second-offer-div">
+                            <h1 class="text-center text-info">900.00DH</h1>
+                            <p class="text-center text-secondary">30min</p>
+                            <p class="text-center">Enjoy a jet ski amazing time on the Agadir coast</p>
+                            <button class="btn btn-primary" onclick="ShowBuy()">Buy Now!</button>
+                        </div>
+                </div>
+                <div id="buyDiv" class="buyDiv">
+                  <div class="divv text-center text-white">
+                    <p>Are you sure you want to buy this offer?</p>
+                    <br>
+                    <button class="btn btn-primary" onclick="HideBuy(),enableScroll()">Yes</button>
+                    <button class="btn btn-primary" onclick="HideBuy(),enableScroll()">No</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="welcome" class="welcome">
+      <div class="welc text-center text-white lead">Welcome! Enjoy your stay! <br> <br>
+        <button class="btn btn-primary" onclick="enableScroll(), HideBuy(), desableWelcome('welcome')">Agree</button>
+      </div>
+    </div>
+
+</body>
+<footer>
+    <div id="footerh1" class="row footerh1 text-434a54">
+        <div class="col-lg-3 mb-3">
+          <a class="d-inline-flex align-items-center mb-2 text-body-secondary text-decoration-none" href="/" aria-label="Bootstrap">
+            <img class="footerimg" src="icon.png" alt="">
+            <span class="fs-5 text-c4a86e">Morocco</span>
+          </a>
+          <ul class="list-unstyled small">
+            <li class="m-2">For at least one week, two weeks, we will put the ways to let you enjoy your experience. As adventure, we don’t have limits.</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/">Home</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/">Docs</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/examples/">Examples</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://icons.getbootstrap.com/">Icons</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://themes.getbootstrap.com/">Themes</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://blog.getbootstrap.com/">Blog</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://cottonbureau.com/people/bootstrap">Swag Store</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Guides</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/getting-started/">Getting started</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">Starter template</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Webpack</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Parcel</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Vite</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Projects</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/bootstrap">Bootstrap 5</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/bootstrap/tree/v4-dev">Bootstrap 4</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/icons">Icons</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/rfs">RFS</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/bootstrap-npm-starter">npm starter</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2 mb-3">
+          <h5>Community</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/bootstrap/issues">Issues</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/twbs/bootstrap/discussions">Discussions</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://github.com/sponsors/twbs">Corporate sponsors</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://opencollective.com/bootstrap">Open Collective</a></li>
+            <li class="mb-2"><a class="text-decoration-none text-c4a86e" href="https://stackoverflow.com/questions/tagged/bootstrap-5">Stack Overflow</a></li>
+          </ul>
+        </div>
+      </div>
+    <div class="bottomDiv">
+        <div class="container text-434a54 text-center">
+            <div class="social-footer">
+                <a href="https://facebook.com/" class="link facebook" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+                <a href="https://Twitter.com/" class="link twitter" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/></svg></a>
+                <a href="http://instagram.com/" class="link instagram" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+            </div>				
+        <div class="name-company"><span>© 2022 YB Agency . ALL RIGHTS RESERVE.</span></div></div>
+    </div>
+</footer>
+</html>
